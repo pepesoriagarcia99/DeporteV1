@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DetalleGrupoActivity"
+    tools:showIn="@layout/activity_detalle_grupo">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/deporte_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="8dp"
+            android:text="Deporte"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/calendario_icon"
+            app:layout_constraintStart_toEndOf="@+id/deporte_icon_detalle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fecha_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="16dp"
+            android:text="Fecha"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapa_detalle"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expandable_layout" />
+
+        <TextView
+            android:id="@+id/descripcion_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Descripcion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deporte_detail" />
+
+        <iammert.com.expandablelib.ExpandableLayout
+            android:id="@+id/expandable_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:childLayout="@layout/layout_child"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descripcion_detail"
+            app:parentLayout="@layout/layout_parent">
+
+        </iammert.com.expandablelib.ExpandableLayout>
+
+        <ImageView
+            android:id="@+id/calendario_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/fecha_detail"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_calendar_today_24px" />
+
+        <ImageView
+            android:id="@+id/deporte_icon_detalle"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+
+        <Button
+            android:id="@+id/cargar_chat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/holo_orange_dark"
+            android:text="Ir al chat grupal"
+            android:textColor="@color/blanco"
+            android:textColorLink="@color/blanco"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mapa_detalle" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

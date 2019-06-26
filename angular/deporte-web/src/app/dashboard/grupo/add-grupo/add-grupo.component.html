@@ -1,0 +1,57 @@
+<div fxLayoutAlign="center center">
+    <div fxFlex="100%" fxFlexFill fxLayout="column" fxLayoutAlign="center">
+      <form class="formilario" fxLayout="column" fxFlex="100%" fxLayoutAlign="center">
+        <h1>Crear Grupo</h1>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Titulo del grupo" [(ngModel)]="titulo" name="titulo" required>
+        </mat-form-field>
+  
+        <!--<mat-form-field class="example-full-width">
+          <input matInput placeholder="Fecha del encuentro" [(ngModel)]="fecha" name="fecha">
+        </mat-form-field>-->
+
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Fecha del encuentro" 
+          (dateInput)="addEvent($event)" (dateChange)="addEvent($event)" disabled required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker disabled="false"></mat-datepicker>
+        </mat-form-field>
+
+        <div>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Localizacion del encuentro" [(ngModel)]="localizacion" name="localizacion" required>
+          </mat-form-field>
+          <span>&nbsp;&nbsp;&nbsp;</span>
+          <button mat-raised-button color="accent" class="botonCrear boton_derecha" (click)="mapa()">
+            <mat-icon class="mat-24">location_on</mat-icon>
+          </button>
+        </div>
+  
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Descripción del encuentro" [(ngModel)]="descripcion" name="descripcion" required></textarea>
+        </mat-form-field>
+
+        <!--<datepicker date-format="yyyy-MM-dd">
+            <input ng-model="date" type="text"/>
+        </datepicker>-->
+
+        
+
+        <mat-form-field class="anchura">
+            <mat-select [(ngModel)]="seleccionadoDeporte" placeholder="Deporte" name="seleccionadoDeporte" required>
+              <mat-option *ngFor="let deporte of listaDeporte" [value]="deporte.id">{{deporte.nombre}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field class="anchura">
+            <mat-select [(ngModel)]="seleccionadoUser" placeholder="Creador" name="seleccionadoUser" required> 
+              <mat-option *ngFor="let user of listaUser"  [value]="user.id">{{user.email}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </form>
+    </div>
+  </div>
+  <button mat-raised-button color="primary" class="botonCrear boton_derecha" (click)="doAddGrupo()">Crear</button>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <button mat-raised-button color="warn" class="botonCrear boton_izquierda" (click)="closeDialog()">Cancelar</button>

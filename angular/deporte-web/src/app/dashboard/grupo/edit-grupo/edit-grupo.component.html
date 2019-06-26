@@ -1,0 +1,42 @@
+<div fxLayoutAlign="center center">
+    <div fxFlex="100%" fxFlexFill fxLayout="column" fxLayoutAlign="center">
+      <form class="formilario" fxLayout="column" fxFlex="100%" fxLayoutAlign="center">
+        <h1>Editar Grupo</h1>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Titulo del grupo" [(ngModel)]="titulo" name="titulo">
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Fecha del encuentro" [(ngModel)]="fecha" name="fecha">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Localizacion del encuentro" [(ngModel)]="localizacion" name="localizacion">
+          </mat-form-field>
+  
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Descripción del deporte" [(ngModel)]="descripcion"
+            name="descripcion"></textarea>
+        </mat-form-field>
+
+        <!--<datepicker date-format="yyyy-MM-dd">
+            <input ng-model="date" type="text"/>
+        </datepicker>-->
+
+        <!--<mat-form-field class="anchura">
+            <mat-select [(value)]="seleccionadoDeporte" placeholder="Deporte">
+              <mat-option *ngfor="let deporte of listaDeporte$ | async" [value]="deporte.id">{{deporte.nombre}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field class="anchura">
+            <mat-select [(value)]="seleccionadoUser" placeholder="Creador">
+              <mat-option *ngfor="let user of listaUser$ | async"  [value]="user.id">{{user.email}}</mat-option>
+          </mat-select>
+        </mat-form-field>-->
+
+      </form>
+    </div>
+  </div>
+  <button mat-raised-button color="primary" class="botonCrear boton_derecha" (click)="doEditDeporte()">Editar</button>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <button mat-raised-button color="warn" class="botonCrear boton_izquierda" (click)="closeDialog()">Cancelar</button>

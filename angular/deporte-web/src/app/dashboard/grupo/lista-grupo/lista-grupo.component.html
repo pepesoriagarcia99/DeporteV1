@@ -1,0 +1,68 @@
+<div fxLayoutAlign="center center">
+    <div fxFlex="95%" fxFlexFill fxLayout="column" fxLayoutAlign="center">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar" style="width: 30%;"><br>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" fxFlexFill fxFlexAlign="center">
+
+            <ng-container matColumnDef="estado">
+                <th mat-header-cell *matHeaderCellDef>Estado</th>
+                <td mat-cell *matCellDef="let grupo">
+                    <!--<button mat-raised-button color="error" (click)="">
+                      <i class="material-icons">delete</i>
+                    </button>-->
+                    <i *ngIf="grupo.bloqueado == true" class="material-icons">lock</i>
+                    <i *ngIf="grupo.bloqueado == false" class="material-icons">lock_open</i>
+                </td>
+            </ng-container>
+
+  
+            <ng-container matColumnDef="titulo">
+                <th mat-header-cell *matHeaderCellDef>Titulo</th>
+                <td mat-cell *matCellDef="let grupo">{{grupo.titulo}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="deporte">
+                <th mat-header-cell *matHeaderCellDef>Deporte</th>
+                <td mat-cell *matCellDef="let grupo">
+                  {{grupo.id_deporte.nombre}}-->Jugadores:{{grupo.id_deporte.nParticipantes}}
+                </td>
+              </ng-container>
+
+  
+          <ng-container matColumnDef="user">
+            <th mat-header-cell *matHeaderCellDef>Creador</th>
+            <td mat-cell *matCellDef="let grupo">
+              <img src="{{grupo.creador_id.picture}}" align="left" >
+              {{grupo.creador_id.email}}
+            </td>
+          </ng-container>       
+  
+            <ng-container matColumnDef="fecha">
+                <th mat-header-cell *matHeaderCellDef>Fecha celebracion</th>
+                <td mat-cell *matCellDef="let grupo">{{grupo.fecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="fecha_creacion">
+                <th mat-header-cell *matHeaderCellDef>Fecha Creacion</th>
+                <td mat-cell *matCellDef="let grupo">{{grupo.createdAt}}</td>
+            </ng-container>
+  
+            <ng-container matColumnDef="acciones">
+                <th mat-header-cell *matHeaderCellDef>Acciones</th>
+                <td mat-cell *matCellDef="let grupo">
+                  <button (click)="openDialogDeleteGrupo(grupo.id)"><i class="material-icons" >delete</i></button>
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                  <button (click)="openDialoEditGrupo(grupo)"><i class="material-icons">edit</i></button>
+                </td>
+            </ng-container>
+  
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <br>
+        <mat-paginator [pageSizeOptions]="[10, 15, 20]" showFirstLastButtons></mat-paginator>
+        
+    </div>
+  </div>
+  <button mat-fab color="warn" class="mat-fab-bottom-right" (click)="openDialogAddGrupo()" style="z-index: 9;">
+      <mat-icon class="mat-24">add</mat-icon>
+    </button>

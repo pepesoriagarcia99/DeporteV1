@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="negro_semitransparente">#B2000000</color>
+    <color name="blanco">#FAFAFA</color>
+    <color name="fondo_mini_boton">#0060cb</color>
+
+
+    <color name="colorPrimary">#0060CB</color>
+
+    <color name="colorPrimaryDark">#003799</color>
+
+    <color name="colorAccent">#004dcb</color>
+    <color name="desplegable">#4074D6</color>
+
+    <color name="btn_login">#F1ECF2</color>
+    <color name="fondo_login">#757575</color>
+    <color name="cuadro_texto_login">#FFFFFF</color>
+    <color name="texto_btn_registro">#25AE90</color>
+
+    <color name="btn_registro">#EA4C87</color>
+    <color name="fondo_registro">#2D3236</color>
+    <color name="cuadro_texto_registro">#B7B7B7</color>
+    <color name="texto_btn_login">#FFFFFF</color>
+    <color name="hint_registro_color">#4F4F4F</color>
+</resources>

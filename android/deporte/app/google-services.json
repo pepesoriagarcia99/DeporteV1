@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "349090652888",
+    "firebase_url": "https://deporte-db3a5.firebaseio.com",
+    "project_id": "deporte-db3a5",
+    "storage_bucket": "deporte-db3a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349090652888:android:92d9bb899ff864b9",
+        "android_client_info": {
+          "package_name": "com.pepe.deporte"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349090652888-urdbedqkt0uh07j89mlib3kmc1kh2cpg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pepe.deporte",
+            "certificate_hash": "de844ff3cac3c5cb9dd02ff7b0039f1e6d18a349"
+          }
+        },
+        {
+          "client_id": "349090652888-mbakanb1llilffptoshd0ic4sb3ia456.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvhTYyZLLBoEB6G8HvB2OvBb8q80fO9C4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349090652888-mbakanb1llilffptoshd0ic4sb3ia456.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

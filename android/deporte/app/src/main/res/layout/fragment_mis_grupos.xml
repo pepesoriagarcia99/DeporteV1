@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mis_grupos_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titulo_mis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Titulo"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/deporte_mis"
+            app:layout_constraintStart_toEndOf="@+id/miniatura_mis"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/salir_mis"
+            android:layout_width="100dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/holo_red_dark"
+            android:text="Salir"
+            android:textColor="@color/texto_btn_login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/miniatura_mis"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/unirse_mis"
+            android:layout_width="100dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/texto_btn_registro"
+            android:text="Unirse"
+            android:textColor="@color/texto_btn_login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/miniatura_mis"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/completo_mis"
+            android:layout_width="100dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/holo_orange_dark"
+            android:text="Completo"
+            android:textColor="@color/texto_btn_login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/miniatura_mis"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/mapa_mis"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/avatar_chat"
+            app:layout_constraintTop_toBottomOf="@+id/fecha_mis"
+            app:srcCompat="@drawable/maps_color" />
+
+        <ImageView
+            android:id="@+id/edit_mis"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/miniatura_mis"
+            app:srcCompat="@drawable/editar_negro" />
+
+        <ImageView
+            android:id="@+id/delete_mis"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edit_mis"
+            app:layout_constraintTop_toBottomOf="@+id/miniatura_mis"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/delete_negro" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar_chat"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fecha_mis"
+            tools:srcCompat="@tools:sample/avatars[3]" />
+
+        <TextView
+            android:id="@+id/deporte_mis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Deporte"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/participantes_mis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Participantes: 5/10"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/fecha_mis"
+            app:layout_constraintStart_toEndOf="@+id/miniatura_mis"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_mis" />
+
+        <TextView
+            android:id="@+id/fecha_mis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Fecha"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deporte_mis" />
+
+        <ImageView
+            android:id="@+id/miniatura_mis"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/miniatura" />
+
+        <ImageView
+            android:id="@+id/imagen_mis"
+            android:layout_width="106dp"
+            android:layout_height="98dp"
+            android:layout_gravity="end|bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/banda_lateral" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

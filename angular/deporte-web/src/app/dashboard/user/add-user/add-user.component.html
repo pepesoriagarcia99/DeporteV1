@@ -1,0 +1,38 @@
+<div fxLayoutAlign="center center">
+  <div fxFlex="100%" fxFlexFill fxLayout="column" fxLayoutAlign="center">
+    <form class="formilario" fxLayout="column" fxFlex="100%" fxLayoutAlign="center">
+      <h1>Crear Usuario</h1>
+      <mat-form-field class="anchura">
+        <input matInput placeholder="Email" [(ngModel)]="email" name="email" required>
+      </mat-form-field>
+
+      <mat-form-field class="anchura">
+        <input type="password" matInput placeholder="Contraseña" [(ngModel)]="pass" name="pass" required>
+      </mat-form-field>
+
+      <mat-form-field class="anchura">
+        <input matInput placeholder="Nombre" [(ngModel)]="name" name="name" required>
+      </mat-form-field>
+
+      <mat-form-field class="anchura">
+        <mat-select [(value)]="seleccionadoRol" placeholder="Rol" required>
+          <mat-option value="user">User</mat-option>
+          <mat-option value="admin">Admin</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  
+      <mat-form-field class="anchura">
+          <mat-select [(value)]="seleccionadoType" placeholder="Tipo" required>
+            <mat-option value="Particular">Particular</mat-option>
+            <mat-option value="Empresa">Empresa</mat-option>
+            <mat-option value="Grupo">Grupo</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </form>
+  </div>
+</div>
+<button mat-raised-button color="primary" class="botonCrear boton_derecha" (click)="doAddUser()">Crear</button>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<button mat-raised-button color="warn" class="botonCrear boton_izquierda" (click)="closeDialog()">Cancelar</button>

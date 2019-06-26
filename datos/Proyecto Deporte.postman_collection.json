@@ -1,0 +1,845 @@
+{
+	"info": {
+		"_postman_id": "b462a9e8-1747-4797-8c19-ba654108e906",
+		"name": "Proyecto Deporte",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"pepe@pepe.com\",\n\t\"password\": \"123456\",\n\t\"name\": \"pepe\",\n\t\"role\":\"user\",\n\t\"picture\":\"\",\n\t\"type\":\"Particular\"\n}"
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/users?access_token=24dAPwweAPUpyOZG9UOOenW3LgVGEU8d",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "24dAPwweAPUpyOZG9UOOenW3LgVGEU8d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "me",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/users/me?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWNiNTM5ZDhkMDAxNzExOWZmZiIsImlhdCI6MTU1MzIwNDk5Mn0.7zbG_eCU2bshQzZrrrLZmH9pdi0J-9fUG7lwdCpQ4Fg",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"me"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWNiNTM5ZDhkMDAxNzExOWZmZiIsImlhdCI6MTU1MzIwNDk5Mn0.7zbG_eCU2bshQzZrrrLZmH9pdi0J-9fUG7lwdCpQ4Fg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "p@p.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/auth?access_token=24dAPwweAPUpyOZG9UOOenW3LgVGEU8d",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "24dAPwweAPUpyOZG9UOOenW3LgVGEU8d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/users?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWNiNTM5ZDhkMDAxNzExOWZmZiIsImlhdCI6MTU1MjU2NDU3NX0.-b5yhdVV9gTvphC8b_p3E6Mwa7w33IGWcvEPrZ9_7Ww",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWNiNTM5ZDhkMDAxNzExOWZmZiIsImlhdCI6MTU1MjU2NDU3NX0.-b5yhdVV9gTvphC8b_p3E6Mwa7w33IGWcvEPrZ9_7Ww"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bloquear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/users/bloquear/5c862a41ec65492c6cc7d799?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjMzMTg1NX0.SlcC-3zcL3XG_d0bN-HgAyqfylm_-yZTWMFI8LrtKY4",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"bloquear",
+								"5c862a41ec65492c6cc7d799"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjMzMTg1NX0.SlcC-3zcL3XG_d0bN-HgAyqfylm_-yZTWMFI8LrtKY4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "desbloquear",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/users/desbloquear/5c862a41ec65492c6cc7d799?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjMzMTg1NX0.SlcC-3zcL3XG_d0bN-HgAyqfylm_-yZTWMFI8LrtKY4",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"desbloquear",
+								"5c862a41ec65492c6cc7d799"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjMzMTg1NX0.SlcC-3zcL3XG_d0bN-HgAyqfylm_-yZTWMFI8LrtKY4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "añadir amigo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/users/friend/5c865fc61556f94c1a778732?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjMyOTY5NX0.FitmofZsTl-xg_GOJ-zY4gpzZO1TPHfxxU7rrdnypXM",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"friend",
+								"5c865fc61556f94c1a778732"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjMyOTY5NX0.FitmofZsTl-xg_GOJ-zY4gpzZO1TPHfxxU7rrdnypXM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar amigo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/users/friend/5c865fc61556f94c1a778732?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjMyOTY5NX0.FitmofZsTl-xg_GOJ-zY4gpzZO1TPHfxxU7rrdnypXM",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"friend",
+								"5c865fc61556f94c1a778732"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjMyOTY5NX0.FitmofZsTl-xg_GOJ-zY4gpzZO1TPHfxxU7rrdnypXM"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "deporte",
+			"item": [
+				{
+					"name": "editar deporte",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\":\"Futbol\",\n\t\"descripcion\":\"El juego se desarrolla por dos equipos de once jugadores cada uno en una extensión rectangular de césped (campo de fútbol, con una meta o portería a cada extremo del campo. Cada equipo de fútbol defiende una portería e intenta introducir el balón en la portería contraria.\",\n\t\"requisitos\":\"balon, deportes, equipacion, guantes\"\t\n}"
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/deportes/5c8642b7c7c8bf39d4767b98?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjI5NjUxM30.YngHmxauP7m2lkDHAp4kTo2fROBVgqwcZcwSt-kpitQ",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"deportes",
+								"5c8642b7c7c8bf39d4767b98"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjI5NjUxM30.YngHmxauP7m2lkDHAp4kTo2fROBVgqwcZcwSt-kpitQ"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear deporte",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\":\"Futbol Sala\",\n\t\"descripcion\":\"El fútbol sala,1​ fútbol de salón, futsal, futsala o microfútbol2​ es un deporte colectivo de pelota practicado entre dos equipos de cinco jugadores cada uno, dentro de una cancha. Surgió inspirado en otros deportes como el fútbol, que es la base del juego; el balonmano; el waterpolo; y el baloncesto; tomando de estos no solo parte de las reglas, sino también algunas tácticas de juego.\",\n\t\"nParticipantes\":10\n\n}"
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/deportes?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWNiNTM5ZDhkMDAxNzExOWZmZiIsImlhdCI6MTU1MjQ3MDU3NH0.ZsEz4Kl3SS7Tkr2dcC4x34WN3atNBKDPMHLpB6-nA90",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"deportes"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWNiNTM5ZDhkMDAxNzExOWZmZiIsImlhdCI6MTU1MjQ3MDU3NH0.ZsEz4Kl3SS7Tkr2dcC4x34WN3atNBKDPMHLpB6-nA90"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista deporte",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/deportes?access_token=24dAPwweAPUpyOZG9UOOenW3LgVGEU8d",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"deportes"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "24dAPwweAPUpyOZG9UOOenW3LgVGEU8d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete deporte",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/deportes/5c8ba4da8cff6c0017bf1994?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWNiNTM5ZDhkMDAxNzExOWZmZiIsImlhdCI6MTU1MjY3NDE0Mn0.ingVeiE7vnasc5aERdQkZQNR7uWW1rIYYhcImHD29xw",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"deportes",
+								"5c8ba4da8cff6c0017bf1994"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWNiNTM5ZDhkMDAxNzExOWZmZiIsImlhdCI6MTU1MjY3NDE0Mn0.ingVeiE7vnasc5aERdQkZQNR7uWW1rIYYhcImHD29xw"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "grupo",
+			"item": [
+				{
+					"name": "crear grupo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_deporte\":\"5c8ad44f728be20017726ae7\", \n\t\"titulo\":\"Partido de Futbol Coripe\",\n\t\"descripcion\":\"partido de Futbol entre colegas, traer equipacion roja\",\n\t\"localizacion\":\"12,8\", \n\t\"fecha\":\"21/3/19\"\n}"
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/grupos?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWRkNTM5ZDhkMDAxNzExYTAwMCIsImlhdCI6MTU1MjQ3MDgwMn0.btIn8rx87tWzNxPGRGhVYMnnasg6RTBgnmI5ZLN1LnM",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"grupos"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWRkNTM5ZDhkMDAxNzExYTAwMCIsImlhdCI6MTU1MjQ3MDgwMn0.btIn8rx87tWzNxPGRGhVYMnnasg6RTBgnmI5ZLN1LnM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unirse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/grupos/join/5c90e36ad846c30017444f73?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWNiNTM5ZDhkMDAxNzExOWZmZiIsImlhdCI6MTU1MzAxOTYzNn0.DTD79pXYw4cIwWYqP0SH5gW8V9MXVO7ePz6hnlNOPWA",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"grupos",
+								"join",
+								"5c90e36ad846c30017444f73"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWNiNTM5ZDhkMDAxNzExOWZmZiIsImlhdCI6MTU1MzAxOTYzNn0.DTD79pXYw4cIwWYqP0SH5gW8V9MXVO7ePz6hnlNOPWA"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar grupo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/grupos?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWNiNTM5ZDhkMDAxNzExOWZmZiIsImlhdCI6MTU1MjU1MzMzOX0.k5A6DFvsda9_tueGBMTHQ1M-l8NZgr98brM2QHR0gRo",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"grupos"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWNiNTM5ZDhkMDAxNzExOWZmZiIsImlhdCI6MTU1MjU1MzMzOX0.k5A6DFvsda9_tueGBMTHQ1M-l8NZgr98brM2QHR0gRo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "salir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/grupos/exit/5c8652ca43a21645bdde7735?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjMyNDUxNX0.pQfYSPBz_PxZrEtsvOnDCYhyoyqIwDgrb5XE1uSIfVo",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"grupos",
+								"exit",
+								"5c8652ca43a21645bdde7735"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjMyNDUxNX0.pQfYSPBz_PxZrEtsvOnDCYhyoyqIwDgrb5XE1uSIfVo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista uno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/grupos/5c90e36ad846c30017444f73?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWRkNTM5ZDhkMDAxNzExYTAwMCIsImlhdCI6MTU1MzAxNjEwMH0.4yiBsUn22BdJrC1g3ypP5RVL2IU254yL34iX7U7uB54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"grupos",
+								"5c90e36ad846c30017444f73"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWRkNTM5ZDhkMDAxNzExYTAwMCIsImlhdCI6MTU1MzAxNjEwMH0.4yiBsUn22BdJrC1g3ypP5RVL2IU254yL34iX7U7uB54"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bloquear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/grupos/bloquear/5c8697858f07312436f468a2?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjMyOTY5NX0.FitmofZsTl-xg_GOJ-zY4gpzZO1TPHfxxU7rrdnypXM",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"grupos",
+								"bloquear",
+								"5c8697858f07312436f468a2"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjMyOTY5NX0.FitmofZsTl-xg_GOJ-zY4gpzZO1TPHfxxU7rrdnypXM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "desbloquear",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/grupos/desbloquear/5c8652ca43a21645bdde7735?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjMyOTY5NX0.FitmofZsTl-xg_GOJ-zY4gpzZO1TPHfxxU7rrdnypXM",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"grupos",
+								"desbloquear",
+								"5c8652ca43a21645bdde7735"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODYyYTQxZWM2NTQ5MmM2Y2M3ZDc5OSIsImlhdCI6MTU1MjMyOTY5NX0.FitmofZsTl-xg_GOJ-zY4gpzZO1TPHfxxU7rrdnypXM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista allMe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/grupos/me?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWRkNTM5ZDhkMDAxNzExYTAwMCIsImlhdCI6MTU1MzAxNjEwMH0.4yiBsUn22BdJrC1g3ypP5RVL2IU254yL34iX7U7uB54",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"grupos",
+								"me"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWRkNTM5ZDhkMDAxNzExYTAwMCIsImlhdCI6MTU1MzAxNjEwMH0.4yiBsUn22BdJrC1g3ypP5RVL2IU254yL34iX7U7uB54"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista all admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/grupos/all?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWNiNTM5ZDhkMDAxNzExOWZmZiIsImlhdCI6MTU1MjYzODY1Mn0.xT25QXHmydY0BWKa4CE12FJYJuypJzICbx40nZeO3eQ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"grupos",
+								"all"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWNiNTM5ZDhkMDAxNzExOWZmZiIsImlhdCI6MTU1MjYzODY1Mn0.xT25QXHmydY0BWKa4CE12FJYJuypJzICbx40nZeO3eQ"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar grupo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_deporte\":\"5c88d28b539d8d001711a004\", \n\t\"titulo\":\"Partido de Tenis Moron, EDITADO\",\n\t\"descripcion\":\"partido de Tenis entre colegas, traer raquetasl\",\n\t\"localizacion\":\"12,8\", \n\t\"fecha\":\"28/3/19\"\n}"
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/grupos/5c88d371539d8d001711a007?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWRkNTM5ZDhkMDAxNzExYTAwMCIsImlhdCI6MTU1MjY3ODU5NX0.KyJgZgB2oHPlx9hzmZHjlq6fiTbvukBF-Idem5_vczI",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"grupos",
+								"5c88d371539d8d001711a007"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWRkNTM5ZDhkMDAxNzExYTAwMCIsImlhdCI6MTU1MjY3ODU5NX0.KyJgZgB2oHPlx9hzmZHjlq6fiTbvukBF-Idem5_vczI"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://app-deporte.herokuapp.com/grupos/admin?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWRkNTM5ZDhkMDAxNzExYTAwMCIsImlhdCI6MTU1MjQ3MDgwMn0.btIn8rx87tWzNxPGRGhVYMnnasg6RTBgnmI5ZLN1LnM",
+							"protocol": "https",
+							"host": [
+								"app-deporte",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"grupos",
+								"admin"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODhkMWRkNTM5ZDhkMDAxNzExYTAwMCIsImlhdCI6MTU1MjQ3MDgwMn0.btIn8rx87tWzNxPGRGhVYMnnasg6RTBgnmI5ZLN1LnM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one public",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/grupos/publico/5c92a6013a28860017cf665d?access_token=24dAPwweAPUpyOZG9UOOenW3LgVGEU8d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"grupos",
+								"publico",
+								"5c92a6013a28860017cf665d"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "24dAPwweAPUpyOZG9UOOenW3LgVGEU8d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all public",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9000/grupos/publico?access_token=24dAPwweAPUpyOZG9UOOenW3LgVGEU8d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"grupos",
+								"publico"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "24dAPwweAPUpyOZG9UOOenW3LgVGEU8d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

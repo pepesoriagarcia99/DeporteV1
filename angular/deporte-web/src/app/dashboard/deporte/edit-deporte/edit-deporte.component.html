@@ -1,0 +1,29 @@
+<div fxLayoutAlign="center center">
+    <div fxFlex="100%" fxFlexFill fxLayout="column" fxLayoutAlign="center">
+      <form class="formilario" fxLayout="column" fxFlex="100%" fxLayoutAlign="center">
+        <h1>Editar Deporte</h1>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Nombre del deporte" [(ngModel)]="nombre" name="nombre">
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Numero de jugadores" [(ngModel)]="participantes" name="participantes">
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Requisitos del deporte" [(ngModel)]="requisitos"name="requisitos"></textarea>
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Icono" [(ngModel)]="foto" name="foto">
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Descripción del deporte" [(ngModel)]="descripcion"name="descripcion"></textarea>
+        </mat-form-field>
+      </form>
+    </div>
+  </div>
+  <button mat-raised-button color="primary" class="botonCrear boton_derecha" (click)="doEditDeporte()">Editar</button>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <button mat-raised-button color="warn" class="botonCrear boton_izquierda" (click)="closeDialog()">Cancelar</button>

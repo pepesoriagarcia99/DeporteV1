@@ -1,0 +1,52 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span class="titulo">Registro</span>
+    <span class="example-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon class="example-icon">settings</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="">Login</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+<br><br><br><br>
+<mat-card class="example-card">
+  <h1>Register</h1>
+  <div class="example-container">
+
+    <mat-form-field class="anchura">
+      <input matInput placeholder="Email" [(ngModel)]="email" required>
+    </mat-form-field>
+    <br><br>
+    <mat-form-field class="anchura">
+      <input type="password" matInput placeholder="Contraseña" [(ngModel)]="password" required>
+    </mat-form-field>
+    <br><br>
+    <mat-form-field class="anchura">
+      <input matInput placeholder="Nombre" [(ngModel)]="name" required>
+    </mat-form-field>
+    <br><br>
+    <!--<mat-form-field class="anchura">
+      <input matInput placeholder="Tipo" [(ngModel)]="type" required>
+    </mat-form-field>-->
+
+        <!--<mat-select placeholder="Tipo">
+          <mat-option *ngFor="let type of types" [value]="type.value">
+            {{type}}
+          </mat-option>
+        </mat-select>-->
+    <mat-form-field class="anchura">
+        <mat-select [(value)]="seleccionadoType" placeholder="Tipo">
+          <mat-option value="Particular">Particular</mat-option>
+          <mat-option value="Empresa">Empresa</mat-option>
+          <mat-option value="Grupo">Grupo</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <br><br>
+  </div>
+  <button class="boton_izquierda" mat-raised-button color="primary" (click)="doRegister()">Registrar</button>
+  <br><br>
+</mat-card>
+<br>

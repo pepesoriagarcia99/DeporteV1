@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:name="com.pepe.notes.PropretiesFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutManager="LinearLayoutManager"
+    tools:context=".fragment.GruposTodosFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_list"
+        android:name="com.pepe.deporte.grupostodosFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/findGrupo"
+        tools:context=".fragment.GruposTodosFragment"
+        tools:listitem="@layout/fragment_grupos" />
+
+</android.support.v4.widget.SwipeRefreshLayout>
